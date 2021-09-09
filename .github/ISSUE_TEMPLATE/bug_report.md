@@ -7,11 +7,17 @@ assignees: ''
 
 ---
 
+**Prerequisites**
+
+- [ ] I have read and understood the `CONTRIBUTING` guide
+- [ ] I looked for duplicate issues before submitting this one
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
