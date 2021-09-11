@@ -136,6 +136,21 @@
     "phpspec/prophecy": {
         "version": "1.13.0"
     },
+    "phpstan/phpstan": {
+        "version": "0.12.98"
+    },
+    "phpstan/phpstan-deprecation-rules": {
+        "version": "0.12.6"
+    },
+    "phpstan/phpstan-doctrine": {
+        "version": "0.12.44"
+    },
+    "phpstan/phpstan-strict-rules": {
+        "version": "0.12.11"
+    },
+    "phpstan/phpstan-symfony": {
+        "version": "0.12.44"
+    },
     "phpunit/php-code-coverage": {
         "version": "9.2.6"
     },

@@ -3,6 +3,7 @@
 
 # Documentation files and vendored files are excluded from language statistics.
 /vendor/* linguist-vendored
+/.github/* linguist-vendored
 /doc[s]/* linguist-documentation
 
 # We do not want any end-of-line conversions applied to, nor textual diffs produced for, any binary file we track.
