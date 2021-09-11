@@ -31,3 +31,5 @@
 ###> friendsofphp/php-cs-fixer ###
 /linters/.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
+
+/linters/.phpstan-cache
