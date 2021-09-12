@@ -23,13 +23,11 @@
 ###< phpunit/phpunit ###
 
 ###> squizlabs/php_codesniffer ###
-/linters/.phpcs-cache
-/linters/phpcs_report.xml
-/linters/phpcbf_report.xml
+.phpcs-cache
+phpcs_report.xml
+phpcbf_report.xml
 ###< squizlabs/php_codesniffer ###
 
 ###> friendsofphp/php-cs-fixer ###
-/linters/.php-cs-fixer.cache
+.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
-
-/linters/.phpstan-cache

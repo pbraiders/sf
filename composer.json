@@ -67,6 +67,7 @@
         "phpstan/phpstan-strict-rules": "^0.12.11",
         "phpstan/phpstan-symfony": "^0.12.44",
         "phpunit/phpunit": "^9.5",
+        "psalm/plugin-symfony": "^3.0",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "5.3.*",
         "symfony/css-selector": "5.3.*",
@@ -74,7 +75,8 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^5.3",
         "symfony/stopwatch": "5.3.*",
-        "symfony/web-profiler-bundle": "5.3.*"
+        "symfony/web-profiler-bundle": "5.3.*",
+        "vimeo/psalm": "^4.10"
     },
     "config": {
         "optimize-autoloader": true,
@@ -109,15 +111,16 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "check-cs": "vendor/bin/phpcs --standard=linters/phpcs.xml --report=checkstyle --report-file=linters/phpcs_report.xml --no-cache",
+        "check-cs": "vendor/bin/phpcs --standard=config/linters/phpcs.xml --report=checkstyle --report-file=var/log/phpcs_report.xml",
         "fix-cs": [
             "@squizlabs",
             "@friendsofphp"
         ],
-        "squizlabs": "vendor/bin/phpcbf --standard=linters/phpcs.xml --no-cache",
-        "friendsofphp": "vendor/bin/php-cs-fixer fix --config=linters/php-cs-fixer.php -v --using-cache=no",
-        "stan": "vendor/bin/phpstan analyse -c linters/phpstan.neon --no-progress --xdebug",
-        "stan-baseline": "vendor/bin/phpstan analyse -c linters/phpstan.neon --no-progress --xdebug --generate-baseline linters/phpstan-baseline.neon"
+        "squizlabs": "vendor/bin/phpcbf --standard=config/linters/phpcs.xml --no-cache",
+        "friendsofphp": "vendor/bin/php-cs-fixer fix --config=config/linters/php-cs-fixer.php -v --using-cache=no",
+        "stan": "vendor/bin/phpstan analyse -c config/linters/phpstan.neon --no-progress --xdebug",
+        "stan-baseline": "vendor/bin/phpstan analyse -c config/linters/phpstan.neon --no-progress --xdebug --generate-baseline config/linters/phpstan-baseline.neon",
+        "psalm": "vendor/bin/psalm --config=config/linters/psalm.xml --threads=4 --show-info=true"
     },
     "conflict": {
         "symfony/symfony": "*"
